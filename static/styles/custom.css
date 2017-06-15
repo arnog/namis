@@ -4,17 +4,32 @@
 	padding-right: 0px;
 }
 .prettyprint code{
-  	background: #1d1f21;
+  	background: #fdfdfd;
   	padding-left: 0px;
 	padding-right: 0px;
 }
 body{
 	padding: 0;
 }
+footer {
+	color: #bbb;
+	font-size: small;
+}
+footer a {
+	color: rgba(0, 102, 206, 0.44);
+}
 h1 {
 	line-height: 1em;
-	font-weiht: 700;
+	font-weight: 700;
 	color: #cd0030;
+	text-transform: uppercase;
+	letter-spacing: -0.03em;
+}
+h2 {
+	font-weight: 700;
+}
+h3 {
+	font-weight: 700;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Source Sans Pro', sans-serif;
@@ -24,6 +39,12 @@ a, a:active {
 }
 tt, code, kbd, samp {
 	font-family: 'Source Code Pro', monospace;
+	font-size: 0.875rem;
+  	background: #fdfdfd;
+}
+#param-type {
+	font-family: 'Source Code Pro', monospace;
+	font-size: 0.875rem;
 }
 #nav{
 	border-right: solid 1px #ddd;
@@ -39,7 +60,7 @@ tt, code, kbd, samp {
 	padding : 20px;
 }
 .prettyprint.linenums li.selected, .prettyprint.linenums li.selected *{
-   background-color: #F4DE36;
+   background-color: rgba(244, 222, 54, 0.33);
 }
 .name{
 	color: #cd0030;
@@ -54,6 +75,10 @@ nav ul li a:hover, nav ul li ul li a:hover{
 }
 h3.group-title{
 	color: #cd0030;
+	font-weight: 700;
+	font-size: 1em;
+	letter-spacing: 0;
+	
 }
 dl.inherited-line{
 	border-bottom: 1px solid hsl(0, 0%, 87%);
@@ -66,12 +91,16 @@ input.search{
 	border-radius: 1000px;
 	padding : 5px 8px;
 	border: 1px solid #ddd;
+	width: calc(100% - 10px);
 }
 input.search:focus{
 	background: #FFF;
-	border: 0;
+	border: 1px solid #ddd;
 	outline: 0;
 	box-shadow: 0 0 5px 2px #0066ce;
+}
+input.search::placeholder {
+	color: #999;
 }
 .className{
 	color : #cd0030;
