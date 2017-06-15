@@ -11,13 +11,26 @@
 body{
 	padding: 0;
 }
+h1 {
+	line-height: 1em;
+	font-weiht: 700;
+	color: #cd0030;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+a, a:active {
+	color: #0066ce;
+}
+tt, code, kbd, samp {
+	font-family: 'Source Code Pro', monospace;
+}
 #nav{
 	border-right: solid 1px #ddd;
 	padding: 0;
 	padding-left: 10px;
 	margin: 0;
 	width: 220px;
-	background: #033649;
 }
 #main{
 	calc(100% - 220px);
@@ -29,17 +42,18 @@ body{
    background-color: #F4DE36;
 }
 .name{
-	color: #BF4D28;
+	color: #cd0030;
 	font-weight: bold;
 }
 nav ul li a, nav ul li ul li a {
-	color: #E8DDCB;
+	color: #0066ce;
 }
 nav ul li a:hover, nav ul li ul li a:hover{
-	color: #BF4D28;
+	color: #0066ce;
+	text-decoration: underline;
 }
 h3.group-title{
-	color: #CDB380;
+	color: #cd0030;
 }
 dl.inherited-line{
 	border-bottom: 1px solid hsl(0, 0%, 87%);
@@ -49,16 +63,16 @@ dl.inherited-line{
 input.search{
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
-	border-radius: 10px;
+	border-radius: 1000px;
 	padding : 5px 8px;
-	background: #000;
-	border: 0;
+	border: 1px solid #ddd;
 }
 input.search:focus{
 	background: #FFF;
 	border: 0;
 	outline: 0;
+	box-shadow: 0 0 5px 2px #0066ce;
 }
 .className{
-	color : #FFFDD1;
+	color : #cd0030;
 }
