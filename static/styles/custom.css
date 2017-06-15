@@ -5,8 +5,9 @@
 }
 .prettyprint code{
   	background: #fdfdfd;
-  	padding-left: 0px;
-	padding-right: 0px;
+  	padding-left: 0;
+	padding-right: 0;
+	margin: 0;
 }
 body{
 	padding: 0;
@@ -22,8 +23,12 @@ h1 {
 	line-height: 1em;
 	font-weight: 700;
 	color: #cd0030;
-	text-transform: uppercase;
 	letter-spacing: -0.03em;
+	text-transform: uppercase;
+}
+h1.page-title {
+	text-transform: none;
+	margin: 0 0 30px 30px;
 }
 h2 {
 	font-weight: 700;
@@ -41,6 +46,11 @@ tt, code, kbd, samp {
 	font-family: 'Source Code Pro', monospace;
 	font-size: 0.875rem;
   	background: #fdfdfd;
+}
+details {
+	font-size: .85em;
+	color: #666;
+	background: #fafafa;
 }
 #param-type {
 	font-family: 'Source Code Pro', monospace;
@@ -73,8 +83,11 @@ nav ul li a:hover, nav ul li ul li a:hover{
 	color: #0066ce;
 	text-decoration: underline;
 }
+nav > h3.group-title {
+	
+}
 h3.group-title{
-	color: #cd0030;
+	color: #333;
 	font-weight: 700;
 	font-size: 1em;
 	letter-spacing: 0;
