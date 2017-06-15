@@ -6,19 +6,14 @@ A clean, responsive documentation template theme for JSDoc 3, based on [Minami](
 
 ## Uses
 
+- Source Sans Pro and Source Code Pro.
 - [the Taffy Database library](http://taffydb.com/)
 - [Underscore Template library](http://documentcloud.github.com/underscore/#template)
-- [Montserrat](http://www.google.com/fonts/specimen/Monsterrat) & Helvetica Neue
-
-## Live examples
-
-- [Honeyjs Document](https://hungluu2106.github.io/honeyjs)
 
 ## What's new
 
 - Implements a search engine
 - Makes a more themeable template based on Minami, all you need to do is edit the custom.css file
-- Uses more attractive jQuery scroll plugin named [NiceScroll](https://github.com/inuyaksa/jquery.nicescroll)
 - Improves color scheme and UI
 
 ## Install
