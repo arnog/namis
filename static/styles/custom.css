@@ -3,6 +3,9 @@
 	padding-left: 0px;
 	padding-right: 0px;
 }
+.prettyprint.linenums {
+	padding-left: 0;
+}
 .prettyprint code{
   	background: #fdfdfd;
   	padding-left: 0;
@@ -47,12 +50,12 @@ tt, code, kbd, samp {
 	font-size: 0.875rem;
   	background: #fdfdfd;
 }
-details {
+.details {
 	font-size: .85em;
 	color: #666;
 	background: #fafafa;
 }
-#param-type {
+.param-type {
 	font-family: 'Source Code Pro', monospace;
 	font-size: 0.875rem;
 }
