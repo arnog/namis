@@ -50,12 +50,15 @@ var self = this;
     <?js } ?>
 
     <?js if (data.returns && returns.length) { ?>
-    <h5>Returns:</h5>
-    <?js if (returns.length > 1) { ?><ul><?js
+    <?js if (returns.length > 1) { ?>
+        <h5>return</h5>
+        <ul><?js
         returns.forEach(function(r) { ?>
             <li><?js= self.partial('returns.tmpl', r) ?></li>
         <?js });
-    ?></ul><?js } else {
+    ?></ul><?js } else { ?>
+        return 
+    <?js
         returns.forEach(function(r) { ?>
             <?js= self.partial('returns.tmpl', r) ?>
         <?js });
