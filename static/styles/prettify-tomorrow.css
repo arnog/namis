@@ -10,11 +10,31 @@
 }
 
 /* Specify class=linenums on a pre to get line numbering */
-ol.linenums {
+.prettyprint.linenums ol.linenums {
   margin-top: 0;
   margin-bottom: 0;
   color: #8e908c;
+  padding-left: 40px;
+  list-style-type: none;
+  margin-left: 0;
 }
+
+.prettyprint.linenums ol.linenums > li {
+  counter-increment: linenumbercounter;
+}
+
+.prettyprint.linenums ol.linenums > li:before {
+  content: counter(linenumbercounter) " ";
+  font-weight: bold;
+  float: left;
+  width: 40px;
+}
+
+.prettyprint.linenums ol.linenums:first-child {
+  counter-reset: linenumbercounter;
+}
+
+
 
 li.L0,
 li.L1,
@@ -28,7 +48,7 @@ li.L8,
 li.L9 {
   padding-left: 1em;
   background-color: #ffffff;
-  list-style-type: decimal;
+  list-style-type: none;
 }
 
 @media screen {
