@@ -192,7 +192,7 @@ nav ul ul a, nav ul ul a:active {
 	width: calc(100% - 220px);
 	padding-left: 0;
 	margin-left: 0;
-	padding : 20px;
+	padding : 0 20px 20px 20px;
 	background: #f8f8f8;
 }
 @media only screen and (max-width: 680px) and (min-width: 320px) {
@@ -205,6 +205,13 @@ nav ul ul a, nav ul ul a:active {
 section {
 	background-color: transparent;
 }
+
+section.readme {
+	background-color: #fff;
+	max-width: 700px;
+	border: 1px solid #eee;
+}
+
 .prettyprint.linenums li.selected, .prettyprint.linenums li.selected *{
    background-color: rgba(244, 222, 54, 0.33);
 }
