@@ -35,7 +35,7 @@ footer {
 	color: #bbb;
 	font-size: small;
 	background: #f8f8f8;
-	margin-left: 220px;
+	margin-left: 290px;
 }
 @media only screen and (max-width: 680px) and (min-width: 320px) {
 	footer {
@@ -181,7 +181,12 @@ tt, code, kbd, samp {
 	padding: 0;
 	padding-left: 10px;
 	margin: 0;
-	width: 220px;
+	width: 290px;
+}
+@media only screen and (max-width: 680px) and (min-width: 320px) {
+	#nav{
+		width: calc(290px - 40px);
+	}
 }
 nav ul ul a, nav ul ul a:active {
 	padding-left: 5px;
@@ -189,18 +194,26 @@ nav ul ul a, nav ul ul a:active {
 }
 
 #main{
-	width: calc(100% - 220px);
+	width: calc(100% - 290px);
 	padding-left: 0;
 	margin-left: 0;
 	padding : 0 20px 20px 20px;
 	background: #f8f8f8;
 }
 @media only screen and (max-width: 680px) and (min-width: 320px) {
-	#main{
+	#main {
 		width: 100%;
+		padding: 0;
+	}
+	#main section {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 
+section[role="navigation"] {
+	padding: 0;
+}
 
 section {
 	background-color: transparent;

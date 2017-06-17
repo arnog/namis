@@ -13,7 +13,7 @@ var util = require('util');
 var htmlsafe = helper.htmlsafe;
 var linkto = helper.linkto;
 var resolveAuthorLinks = helper.resolveAuthorLinks;
-var scopeToPunc = helper.scopeToPunc;
+// var scopeToPunc = helper.scopeToPunc;
 var hasOwnProp = Object.prototype.hasOwnProperty;
 
 var data;
@@ -357,6 +357,10 @@ function linktoExternal(longName, name) {
 function buildNav(members) {
     //var nav = '<h2><a href="index.html">Home</a></h2>';
     var nav = '<h3 class="group-title"><a href="index.html">&#x3C; Home &#x3E;</a></h3>';
+    if(env.conf.templates && env.conf.templates && env.conf.templates.title) {
+        nav = '<h3 class="group-title"><a href="index.html">' + env.conf.templates.title + '</a></h3>';
+    }
+
     nav += '<input class="search" placeholder="Search" type="text">';
     var seen = {};
     var seenTutorials = {};

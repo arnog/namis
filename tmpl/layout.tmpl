@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title><?js= title ?> - Documentation</title>
+    <meta charset="utf-8"><?js
+    var siteTitle = 'Documentation';
+    if(env.conf.templates && env.conf.templates && env.conf.templates.pageTitle) {
+        siteTitle = env.conf.templates.pageTitle
+    } else if(env.conf.templates && env.conf.templates && env.conf.templates.title) {
+        siteTitle = env.conf.templates.title
+    }
+    ?><title><?js= title ?> - <?js= siteTitle?></title><?js
+
+    if(env.conf.templates && env.conf.templates && env.conf.templates.description) {
+    ?><meta name="description" content="<?js= env.conf.templates.description ?>"><?js
+    }
+    if(env.conf.templates && env.conf.templates && env.conf.templates.keywords) {
+    ?><meta name="keywords" content="<?js= env.conf.templates.keywords ?>"><?js
+    }?>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -17,29 +30,31 @@
 </head>
 <body>
 
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-<label for="nav-trigger" class="navicon-button x">
-  <div class="navicon"></div>
-</label>
+<section role="navigation">
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+    </label>
 
-<label for="nav-trigger" class="overlay"></label>
+    <label for="nav-trigger" class="overlay"></label>
 
-<nav id="nav">
-    <?js= this.nav ?>
-</nav>
+    <nav id="nav">
+        <?js= this.nav ?>
+    </nav>
+</section>
 
-<div id="main">
+<main id="main">
     <?js if (title != 'Home') { ?>
         <h1 class="page-title"><?js= title ?></h1>
     <?js } ?>
 
     <?js= content ?>
-</div>
+</main>
 
 <br class="clear">
 
-<footer>
-    Doc created <?js if(env.conf.templates && env.conf.templates.default && env.conf.templates.default.includeDate !== false) { ?> on <?js= (new Date()).toISOString() ?><?js } ?>
+<footer role="contentInfo">
+    Doc created <?js if(env.conf.templates && env.conf.templates.includeDate !== false) { ?> on <?js= (new Date()).toISOString() ?><?js } ?>
     by <a href="https://github.com/jsdoc3/jsdoc">JSDoc <?js= env.version.number ?></a>
     using a customized <a href="https://www.npmjs.com/package/namis">Namis</a> theme.
 </footer>
