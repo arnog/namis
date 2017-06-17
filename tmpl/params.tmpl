@@ -1,3 +1,4 @@
+<div class='param'>
 <?js
     var params = obj;
 
@@ -14,7 +15,7 @@
             paramRegExp = new RegExp('^(?:' + parentParam.name + '(?:\\[\\])*)\\.(.+)$');
 
             if ( paramRegExp.test(param.name) ) {
-                param.name = RegExp.$1;
+                param.name = parentParam.name + '.' + RegExp.$1;
                 parentParam.subparams = parentParam.subparams || [];
                 parentParam.subparams.push(param);
                 params[i] = null;
@@ -55,7 +56,7 @@
             if (!param) { return; }
     ?>
 
-        <p>
+        <p class="signature">
             <?js if (params.hasName) {?>
                 <span class="name"><code><?js= param.name ?></code></span>
             <?js } ?>
@@ -69,30 +70,32 @@
             <?js if (params.hasAttributes) {?>
                 <span class="attributes">
                 <?js if (param.optional) { ?>
-                    &lt;optional><br>
+                    <span class="attribute">optional</span>
                 <?js } ?>
 
                 <?js if (param.nullable) { ?>
-                    &lt;nullable><br>
+                    <span class="attribute">nullable</span>
                 <?js } ?>
 
                 <?js if (param.variable) { ?>
-                    &lt;repeatable><br>
+                    <span class="attribute">repeatable</span>
                 <?js } ?>
                 </span>
             <?js } ?>
 
             <?js if (params.hasDefault) {?>
                 <?js if (typeof param.defaultvalue !== 'undefined') { ?>
-                    <?js= self.htmlsafe(param.defaultvalue) ?>
+                    <span class="default">= <?js= self.htmlsafe(param.defaultvalue) ?></span>
                 <?js } ?>
             <?js } ?>
             </p>
-
-            <p class="description last"><?js= param.description ?><?js if (param.subparams) { ?>
-                <h6>Properties</h6>
-                <?js= self.partial('params.tmpl', param.subparams) ?>
-            <?js } ?></p>
+            <?js if (param.description || param.subparams) { ?>
+                <p class="description last"><?js= param.description ?><?js if (param.subparams) { ?>
+                    <h6>Properties</h6>
+                    <?js= self.partial('params.tmpl', param.subparams) ?>
+                <?js } ?></p>
+            <?js } ?>
         </p>
 
     <?js }); ?>
+</div>
