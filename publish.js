@@ -362,6 +362,9 @@ function buildNav(members) {
     }
 
     nav += '<input class="search" placeholder="Search" type="text">';
+
+//    nav += '<label class="checkbox"><input class="toggle-private" type="checkbox">Include Private</input></label>';
+
     var seen = {};
     var seenTutorials = {};
 

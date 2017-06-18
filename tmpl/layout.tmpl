@@ -25,7 +25,6 @@
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro" rel="stylesheet">
-<!--    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"> -->
     <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
     <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
     <link type="text/css" rel="stylesheet" href="styles/custom.css">
@@ -46,6 +45,10 @@
 
     <nav id="nav">
         <?js= this.nav ?>
+<footer role="contentInfo">
+    Made with <a href="https://github.com/jsdoc3/jsdoc">JSDoc <?js= env.version.number ?></a>. 
+    <?js if(env.conf.templates && env.conf.templates.includeDate !== false) { ?> on <?js= (new Date()).toISOString() ?><?js } ?>
+</footer>
     </nav>
 </section>
 
@@ -57,13 +60,6 @@
     <?js= content ?>
 </main>
 
-<br class="clear">
-
-<footer role="contentInfo">
-    Doc created <?js if(env.conf.templates && env.conf.templates.includeDate !== false) { ?> on <?js= (new Date()).toISOString() ?><?js } ?>
-    by <a href="https://github.com/jsdoc3/jsdoc">JSDoc <?js= env.version.number ?></a>
-    using a customized <a href="https://www.npmjs.com/package/namis">Namis</a> theme.
-</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/jquery.nicescroll/3.6.0/jquery.nicescroll.min.js"></script> -->
@@ -71,24 +67,6 @@
 <script>prettyPrint();
 
 (function($){
-/*
-    $('nav').niceScroll({
-        cursorwidth: 7,
-        hwacceleration: true,
-        cursorcolor: "#036564",
-        cursorborder: "1px solid #036564"
-    });
-
-    $('html').niceScroll({
-        cursorwidth: 10,
-        hwacceleration: true,
-        smoothscroll: true,
-        cursorminheight: 32,
-        enablemousewheel: true, // nicescroll can manage mouse wheel events
-        enablekeyboard: true // nicescroll can manage keyboard events
-        ,cursorcolor: "#033649"
-    });
-*/
     $('#nav').search(['className', 'methodName']);
 })(jQuery);
 </script>

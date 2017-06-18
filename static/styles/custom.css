@@ -14,17 +14,19 @@
 
 .prettyprint.linenums li code {
 	background: transparent;
+	font-size: 14px;
 }
 
 .prettyprint.linenums ol li.L0, li.L2,li.L4, li.L6, li.L8 {
-	background-color: #fafafa;
+	background-color: #fcfcfc;
 }
 
 .prettyprint code{
-  	padding-left: 0;
+	padding-left: 10px;
 	padding-right: 0;
 	margin: 0;
 	border-radius: 0;
+	background: #eeeef1;
 }
 body{
 	padding: 0;
@@ -35,8 +37,9 @@ body{
 footer {
 	color: #bbb;
 	font-size: small;
-	background: #f8f8f8;
-	margin-left: 290px;
+	margin-left: 0;
+	padding-left: 0;
+	padding-top: 40px;
 }
 footer a {
 	color: rgba(0, 102, 206, 0.44);
@@ -180,7 +183,15 @@ tt, code, kbd, samp {
 	padding-left: 10px;
 	margin: 0;
 	width: 290px;
+	position: relative;
 }
+
+#nav checkbox {
+	display: block;
+	margin-top: 12px;
+	font-size: .9em;
+}
+
 nav ul ul a, nav ul ul a:active {
 	padding-left: 5px;
 	border-left: .5px solid #f4f4f4;
@@ -192,6 +203,10 @@ nav ul ul a, nav ul ul a:active {
 	margin-left: 0;
 	padding : 0 20px 20px 20px;
 	background: #f8f8f8;
+	position: absolute;
+	top: 0;
+	left: 289px;
+	border: 1px solid #ddd;
 }
 @media only screen and
 	(max-width: 800px) and
@@ -200,6 +215,7 @@ nav ul ul a, nav ul ul a:active {
 	#main {
 		width: 100%;
 		padding: 0;
+		left: 0;
 	}
 	#main h1.page-title {
 		margin: 1em 0 1em 5px;
@@ -214,6 +230,7 @@ nav ul ul a, nav ul ul a:active {
 	#nav {
 		left: -290px;
 		font-size: 24px;
+		position: fixed;
 	}
 	nav ul li a, nav ul li a:active {
 		font-size: 18px;
